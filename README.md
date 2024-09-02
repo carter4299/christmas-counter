@@ -7,7 +7,8 @@
 ### Linux and MacOS
 ```sh
 mkdir -p ~/.local/bin
-curl -o ~/.local/bin/ https://raw.githubusercontent.com/carter4299/christmas-counter/main/zig-out/bin/christmas
+curl -o ~/.local/bin/christmas https://raw.githubusercontent.com/carter4299/christmas-counter/main/zig-out/bin/christmas
+chmod +x ~/.local/bin/christmas
 
 #bash
 echo "export PATH=\$HOME/.local/bin/:\$PATH" >> ~/.bashrc
@@ -28,4 +29,5 @@ zig build
 
 mkdir -p ~/.local/bin
 cp zig-out/bin/christmas ~/.local/bin
+chmod +x ~/.local/bin/christmas
 ```
