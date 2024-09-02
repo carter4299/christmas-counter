@@ -1,7 +1,7 @@
-# Terminal Christmas Countdown
+# Christmas Countdown
+Links to daily [Advent of Code](https://adventofcode.com/) problem during December.
 
 <img src="public/terminal.png" width="500px" height="auto" />
-
 
 ## Installation
 ### Linux and MacOS
