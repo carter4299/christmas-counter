@@ -28,6 +28,6 @@ cd christmas-counter
 zig build
 
 mkdir -p ~/.local/bin
-cp zig-out/bin/christmas ~/.local/bin
+cp zig-out/bin/christmas ~/.local/bin/
 chmod +x ~/.local/bin/christmas
 ```
