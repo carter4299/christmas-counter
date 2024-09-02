@@ -1,9 +1,9 @@
 const std = @import("std");
-const globals = @import("compv.zig");
+const tree = @import("tree.zig");
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
-    const lines = comptime compTree();
+    const lines = comptime tree.compTree();
 
     const until_cmas = 1735106400 - std.time.timestamp();
     if (until_cmas < 0) {
@@ -27,16 +27,4 @@ pub fn main() !void {
         }
         try stdout.print("\n", .{});
     }
-}
-
-fn compTree() [27][54][]const u8 {
-    var lines: [27][54][]const u8 = undefined;
-
-    for (0..27) |i| {
-        for (0..54) |j| {
-            lines[i][j] = @ptrCast(std.fmt.comptimePrint("{s}{c}{s}", .{ globals.colors[@as(usize, @intCast(globals.color[i][j]))], globals.tree[i][j], globals.reset }));
-        }
-    }
-
-    return lines;
 }
