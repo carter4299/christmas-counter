@@ -1,13 +1,21 @@
 const std = @import("std");
 
 pub fn build(b: *std.Build) void {
-    const target = b.standardTargetOptions(.{});
-    const optimize = b.standardOptimizeOption(.{
-        .preferred_optimize_mode = .ReleaseSmall,
-    });
+    const target_query = b.standardTargetOptionsQueryOnly(.{});
+    const optimize = b.standardOptimizeOption(.{});
+
+    const target = b.resolveTargetQuery(target_query);
+
+    var bin_name: []const u8 = undefined;
+    switch (target.result.os.tag) {
+        .macos => bin_name = "christmas-mac",
+        .linux => bin_name = "christmas-linux",
+        .windows => bin_name = "christmas",
+        else => bin_name = "christmas",
+    }
 
     const exe = b.addExecutable(.{
-        .name = "christmas",
+        .name = bin_name,
         .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,
