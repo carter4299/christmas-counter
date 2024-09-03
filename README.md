@@ -4,10 +4,22 @@ Links to daily [Advent of Code](https://adventofcode.com/) problem during Decemb
 <img src="public/terminal.png" width="500px" height="auto" />
 
 ## Installation
-### Linux and MacOS
-```sh
+### Set Up 
+```
 mkdir -p ~/.local/bin
-curl -o ~/.local/bin/christmas https://raw.githubusercontent.com/carter4299/christmas-counter/main/zig-out/bin/christmas
+```
+
+### Download
+```sh
+# MacOS
+curl -o ~/.local/bin/christmas https://raw.githubusercontent.com/carter4299/christmas-counter/main/zig-out/bin/christmas-mac
+# Linux
+curl -o ~/.local/bin/christmas https://raw.githubusercontent.com/carter4299/christmas-counter/main/zig-out/bin/christmas-linux
+
+```
+
+### Running
+```sh
 chmod +x ~/.local/bin/christmas
 
 #bash
@@ -21,7 +33,7 @@ echo "set -gx PATH ~/.local/bin \$PATH" >> ~/.config/fish/config.fish
 echo "christmas" >> ~/.config/fish/config.fish
 ```
 
-## Building
+## Building From Source
 ```sh
 git clone https://github.com/carter4299/christmas-counter.git
 cd christmas-counter
