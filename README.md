@@ -12,9 +12,9 @@ mkdir -p ~/.local/bin
 ### Download
 ```sh
 # MacOS
-curl -o ~/.local/bin/christmas https://raw.githubusercontent.com/carter4299/christmas-counter/main/zig-out/bin/christmas-mac
+curl -o ~/.local/bin/christmas https://raw.githubusercontent.com/cartersusi/christmas-counter/main/zig-out/bin/christmas-mac
 # Linux
-curl -o ~/.local/bin/christmas https://raw.githubusercontent.com/carter4299/christmas-counter/main/zig-out/bin/christmas-linux
+curl -o ~/.local/bin/christmas https://raw.githubusercontent.com/cartersusi/christmas-counter/main/zig-out/bin/christmas-linux
 
 ```
 
@@ -35,7 +35,7 @@ echo "christmas" >> ~/.config/fish/config.fish
 
 ## Building From Source
 ```sh
-git clone https://github.com/carter4299/christmas-counter.git
+git clone https://github.com/cartersusi/christmas-counter.git
 cd christmas-counter
 zig build
 
